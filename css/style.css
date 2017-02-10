@@ -1,0 +1,277 @@
+/*Google Fonts*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+/*************************Begin General Styling*************************/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    /*sets overall font*/
+    font-family: 'Montserrat', sans-serif;
+    /*sets background color of to overall html body*/
+    background: #f7f7f7;
+    -webkit-font-smoothing: antialiased;
+}
+
+.form-module {
+    /*Align all text child elements within main-content to be centered*/
+    text-align: center;
+}
+
+/*************************End General Styling*************************/
+
+/*************************Begin Logo Styling*************************/
+
+.logo {
+    padding: 20px 0;
+    display: block;
+    text-align: center;
+}
+
+.logo span {
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+
+#logo-test-shadow {
+    color: #fff;
+    text-shadow: -2px 0 red, 0 2px red, 2px 0 red, 0 -2px red;
+}
+
+.logo-inner {
+  padding: 20px 20px;
+  display: inline-block;
+  border: 1px solid black;
+  overflow: hidden;
+}
+
+.logo-inner span {
+  font-size: 20px;
+}
+/*************************End Logo Styling*************************/
+
+
+/*************************Begin Form Styling*************************/
+
+.banner p {
+    font-family: 'Raleway', sans-serif;
+    /*Overrides overall font set in body*/
+    font-size: 25px;
+}
+
+.banner div {
+    margin-top: 2em;
+    /**/
+}
+
+.banner div img {
+    height: 150px;
+    width: 150px;
+}
+
+form {
+    /*Styling for form*/
+    margin: 2em auto;
+    /*sets width of form*/
+    width: 400px;
+    border: 1px solid #ebebeb;
+    /*sets background color of form to be white or #fff*/
+    background: #fff;
+    /*adds shadow around form*/
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    padding: 20px 20px;
+}
+
+form p {
+  margin-top: 20px;
+}
+
+input {
+    /*Styling for input fields (Username, Password, etc.)*/
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    color: #636363;
+    width: 90%;
+    margin: 20px auto;
+}
+
+button {
+    /*Styling for button*/
+    position: relative;
+    display: block;
+    padding: 12px 24px;
+    width: 90%;
+    color: #fff;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    background: #ff7058;
+    border: 0;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    margin: 0 auto;
+}
+
+button:hover {
+    /*Hovering mouse pointer over button changes background color*/
+    background: #F1543F;
+}
+
+
+/*************************End Form Styling/*************************/
+
+
+/*************************Begin Student Page Styling/*************************/
+.user-banner {
+  width: 180px;
+  padding: 1px 0px 1px 0px;
+  background: #68de99;
+  text-align: center;
+}
+.user-banner img {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 5px;
+  width: 50px;
+  margin-right: 5px;
+  border-radius: 100%;
+}
+.user-banner .username {
+  font-weight: bold;
+}
+
+#side-bar {
+  position: fixed;
+  background-color: #353942;
+  color: #fff;
+  width: 180px;
+  height: 100vh;
+
+}
+
+#side-bar{
+  list-style-type: none;
+  /*padding: 12px;*/
+  margin: 0;
+  font-weight: 600;
+}
+
+#side-bar li {
+  padding: 20px 20px;
+  /*border-bottom: 1px solid #ebebeb;*/
+}
+
+#side-bar a {
+  color: white;
+  text-decoration: none;
+}
+
+#side-bar ul li:hover {
+  background-color: #2b2e31;
+  cursor: pointer;
+}
+
+#main {
+  margin-left: 180px;
+}
+#main header {
+  position: fixed;
+  background: #fff;
+  width: 100%;
+  padding: 20px;
+  z-index: +1;
+  border-bottom: 1px solid #d9e2e7;
+}
+
+
+/*************************End Student Page Styling/*************************/
+
+
+/*************************Begin Grid Styling/*************************/
+
+[class*="col-"] {
+    float: left;
+}
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+
+/*************************End Grid Styling/*************************/
+
+
+/*************************Begin Media Queries/*************************/
+
+@media only screen and (max-width: 500px) {
+    /*Begin queries for form page*/
+    .logo span {
+        font-size: 30px;
+    }
+    .banner p {
+        font-size: 20px;
+    }
+    .banner div img {
+        width: 30%;
+        height: 30%;
+    }
+    form {
+        width: 80%;
+        margin: 1em auto;
+    }
+    /*End queries for form page*/
+}
+
+
+/*************************End Media Queries/*************************/
