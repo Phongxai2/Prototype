@@ -1,4 +1,5 @@
 /*Google Fonts*/
+
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
@@ -11,10 +12,7 @@
 }
 
 html, body {
-    /*sets overall font*/
     font-family: 'Montserrat', sans-serif;
-    /*sets background color of to overall html body*/
-    background: #f7f7f7;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -23,7 +21,9 @@ html, body {
     text-align: center;
 }
 
+
 /*************************End General Styling*************************/
+
 
 /*************************Begin Logo Styling*************************/
 
@@ -44,15 +44,17 @@ html, body {
 }
 
 .logo-inner {
-  padding: 20px 20px;
-  display: inline-block;
-  border: 1px solid black;
-  overflow: hidden;
+    padding: 20px 20px;
+    display: inline-block;
+    border: 1px solid black;
+    overflow: hidden;
 }
 
 .logo-inner span {
-  font-size: 20px;
+    font-size: 20px;
 }
+
+
 /*************************End Logo Styling*************************/
 
 
@@ -75,24 +77,27 @@ html, body {
 }
 
 form {
-    /*Styling for form*/
     margin: 2em auto;
-    /*sets width of form*/
     width: 400px;
     border: 1px solid #ebebeb;
-    /*sets background color of form to be white or #fff*/
     background: #fff;
-    /*adds shadow around form*/
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     padding: 20px 20px;
 }
 
 form p {
-  margin-top: 20px;
+    margin-top: 20px;
+}
+
+form a {
+    text-decoration: none;
+}
+
+form button a {
+    color: #fff;
 }
 
 input {
-    /*Styling for input fields (Username, Password, etc.)*/
     font-size: 18px;
     padding: 10px 10px 10px 5px;
     display: block;
@@ -102,7 +107,6 @@ input {
 }
 
 button {
-    /*Styling for button*/
     position: relative;
     display: block;
     padding: 12px 24px;
@@ -112,7 +116,7 @@ button {
     line-height: 20px;
     text-align: center;
     letter-spacing: 1px;
-    background: #ff7058;
+    background: crimson;
     border: 0;
     cursor: pointer;
     transition: all 0.25s ease;
@@ -120,8 +124,11 @@ button {
 }
 
 button:hover {
-    /*Hovering mouse pointer over button changes background color*/
     background: #F1543F;
+}
+
+button a {
+  display: block;
 }
 
 
@@ -129,66 +136,91 @@ button:hover {
 
 
 /*************************Begin Student Page Styling/*************************/
-.user-banner {
-  width: 180px;
-  padding: 1px 0px 1px 0px;
-  background: #68de99;
-  text-align: center;
-}
-.user-banner img {
-  display: inline-block;
-  vertical-align: middle;
-  margin-top: 5px;
-  width: 50px;
-  margin-right: 5px;
-  border-radius: 100%;
-}
-.user-banner .username {
-  font-weight: bold;
+
+#side-bar {
+    position: fixed;
+    background-color: #353942;
+    color: #fff;
+    width: 180px;
+    height: 100vh;
+    z-index: 5;
 }
 
 #side-bar {
-  position: fixed;
-  background-color: #353942;
-  color: #fff;
-  width: 180px;
-  height: 100vh;
-
-}
-
-#side-bar{
-  list-style-type: none;
-  /*padding: 12px;*/
-  margin: 0;
-  font-weight: 600;
+    list-style-type: none;
+    /*padding: 12px;*/
+    margin-top: 76px;
+    font-weight: 600;
+    height: 100vh;
 }
 
 #side-bar li {
-  padding: 20px 20px;
-  /*border-bottom: 1px solid #ebebeb;*/
+    padding: 20px 20px;
+    /*border-bottom: 1px solid #ebebeb;*/
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
 }
 
 #side-bar a {
-  color: white;
-  text-decoration: none;
+  display: block;
+    color: white;
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
 }
 
 #side-bar ul li:hover {
-  background-color: #2b2e31;
-  cursor: pointer;
+    background-color: #2b2e31;
+    cursor: pointer;
+    -webkit-transform: scale(1.2, 1);
+    transform: scale(1.2, 1);
 }
 
-#main {
-  margin-left: 180px;
+#main-header header {
+    position: fixed;
+    top: 0;
+    background: #fff;
+    width: 100%;
+    z-index: 4;
 }
-#main header {
-  position: fixed;
-  background: #fff;
-  width: 100%;
-  padding: 20px;
-  z-index: +1;
-  border-bottom: 1px solid #d9e2e7;
+
+#main-header header {
+    position: fixed;
+    background: #fff;
+    width: 100%;
+    z-index: 6;
+    /*border-bottom: 1px solid #d9e2e7;*/
+    box-shadow: 0 0px 9px 4px rgba(0, 0, 0, 0.1), 0 -5px 2px 2px rgba(0, 0, 0, 0.1);
 }
+
+#main-header header p {
+    display: inline-block;
+    width: 180px;
+    padding: 20px 10px;
+    background: crimson;
+    color: white;
+}
+
+#main-header header img {
+    display: inline-block;
+    margin-top: 8px;
+    margin-right: 5px;
+    height: 60px;
+    width: 60px;
+    float: right;
+}
+
+#main-content {
+    position: absolute;
+    width: auto;
+    right: 0;
+    left: 180px;
+    background: #fff;
+    top: 76px;
+    padding: 20px 20px;
+}
+
+#main-content .col-12 img {}
 
 
 /*************************End Student Page Styling/*************************/
@@ -200,53 +232,18 @@ button:hover {
     float: left;
 }
 
-.col-1 {
-    width: 8.33%;
-}
-
-.col-2 {
-    width: 16.66%;
-}
-
-.col-3 {
-    width: 25%;
-}
-
-.col-4 {
-    width: 33.33%;
-}
-
-.col-5 {
-    width: 41.66%;
-}
-
-.col-6 {
-    width: 50%;
-}
-
-.col-7 {
-    width: 58.33%;
-}
-
-.col-8 {
-    width: 66.66%;
-}
-
-.col-9 {
-    width: 75%;
-}
-
-.col-10 {
-    width: 83.33%;
-}
-
-.col-11 {
-    width: 91.66%;
-}
-
-.col-12 {
-    width: 100%;
-}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
 
 
 /*************************End Grid Styling/*************************/
@@ -255,6 +252,16 @@ button:hover {
 /*************************Begin Media Queries/*************************/
 
 @media only screen and (max-width: 500px) {
+    #side-bar {
+        width: 100%;
+        display: none;
+    }
+    #main-content {
+        left: 0;
+    }
+}
+
+@media only screen and (max-width: 600px) {
     /*Begin queries for form page*/
     .logo span {
         font-size: 30px;
@@ -271,6 +278,15 @@ button:hover {
         margin: 1em auto;
     }
     /*End queries for form page*/
+}
+
+@media only screen and (max-width: 768px) {
+    #side-bar, .user-banner {
+        width: 80px;
+    }
+    #main-content {
+        left: 80px;
+    }
 }
 
 

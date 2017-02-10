@@ -2,20 +2,17 @@ $("button").click(function() {
     var bla = $('input:text').val();
 
 
-    if (bla === "student") {
+    if (bla.toLowerCase() === "student") {
         $('.button a').attr('href', 'student.html');
     }
 
-    if (bla === "teacher") {
+    if (bla.toLowerCase() === "teacher") {
         $('.button a').attr('href', 'teacher.html');
     }
 });
 
-$('#button a').keypress(function (e) {
- var key = e.which;
- if(key == 13)  // the enter key code
-  {
-    $('button a').click();
-    return false;
-  }
-});
+// $(document).keypress(function(e) {
+//     if(e.which == 13) {
+//         $("button").click();
+//     }
+// });
