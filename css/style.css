@@ -128,7 +128,7 @@ button:hover {
 }
 
 button a {
-  display: block;
+    display: block;
 }
 
 
@@ -148,25 +148,45 @@ button a {
 
 #side-bar {
     list-style-type: none;
-    /*padding: 12px;*/
     margin-top: 76px;
     font-weight: 600;
     height: 100vh;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 2px 4px 8px rgba(0, 0, 0, 0.28);
 }
 
 #side-bar li {
+    position: relative;
     padding: 20px 20px;
-    /*border-bottom: 1px solid #ebebeb;*/
-    -webkit-transition: all .2s linear;
-    transition: all .2s linear;
+    list-style: none;
+    /*text-align: center;*/
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+}
+
+#side-bar li img {
+    position: absolute;
+    /*display: inline-block;*/
+    height: 25px;
+    width: 25px;
+    left: 13px;
+    top: 15px;
+    /*margin: 20px 0 0 0;*/
+    /*display: none;*/
+}
+
+#side-bar li span{
+  display: inline-block;
+  margin-left: 30px;
 }
 
 #side-bar a {
-  display: block;
+    display: block;
     color: white;
     text-decoration: none;
     height: 100%;
     width: 100%;
+    transition: linear 500ms;
+    -webkit-transition: ease-in 500ms;
 }
 
 #side-bar ul li:hover {
@@ -201,13 +221,22 @@ button a {
     color: white;
 }
 
-#main-header header img {
+#main-header header a img {
     display: inline-block;
     margin-top: 8px;
     margin-right: 5px;
     height: 60px;
     width: 60px;
     float: right;
+}
+
+#menu-toggle {
+    display: inline-block;
+    display: none;
+    height: 30px;
+    width: 30px;
+    margin-top: 24px;
+    margin-left: 10px;
 }
 
 #main-content {
@@ -220,7 +249,56 @@ button a {
     padding: 20px 20px;
 }
 
-#main-content .col-12 img {}
+.background-banner {
+    width: 100%;
+    height: 130px;
+    background-color: crimson;
+    /*box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 2px 4px 8px rgba(0, 0, 0, 0.28);*/
+}
+
+.profile-position {
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    z-index: 2;
+}
+
+.circle {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 2px 4px 8px rgba(0, 0, 0, 0.28);
+}
+
+.circle span img {
+    width: 100%;
+    border-radius: 50%;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.content .col-6 {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.content .col-6 h1 {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.content .col-6:first-of-type {
+    border-right: 1px solid black;
+}
+
+.content .col-6 div {
+    margin-top: 100px;
+    font-size: 100px;
+    color: #23AE89;
+}
 
 
 /*************************End Student Page Styling/*************************/
@@ -232,18 +310,53 @@ button a {
     float: left;
 }
 
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
 
 
 /*************************End Grid Styling/*************************/
@@ -251,20 +364,47 @@ button a {
 
 /*************************Begin Media Queries/*************************/
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 768px) {
     #side-bar {
-        width: 100%;
-        display: none;
+        width: 80px;
+    }
+    #side-bar li  {
+      text-align: center;
+    }
+    #side-bar li img {
+        position: static;
+        display: inline-block;
+    }
+    #side-bar li span {
+        font-size: 10px;
+        margin:0;
     }
     #main-content {
-        left: 0;
+        left: 80px;
+    }
+    .background-banner {
+        height: 80px;
+    }
+    .profile-position {
+        top: 100px;
+    }
+    .circle {
+        height: 110px;
+        width: 110px;
+    }
+    .content .col-6 h1 {
+        font-size: 20px;
+    }
+    .content .col-6 div {
+        margin-top: 30px;
+        font-size: 80px;
     }
 }
 
 @media only screen and (max-width: 600px) {
     /*Begin queries for form page*/
     .banner div img {
-      display: none;
+        display: none;
     }
     .logo span {
         font-size: 30px;
@@ -281,14 +421,53 @@ button a {
         margin: 1em auto;
     }
     /*End queries for form page*/
+    #main-header header {
+        height: 76px;
+        width: 100%;
+    }
 }
 
-@media only screen and (max-width: 768px) {
-    #side-bar, .user-banner {
-        width: 80px;
+@media only screen and (max-width: 500px) {
+    #main-header header p {
+        display: none;
+    }
+    #menu-toggle {
+        display: inline-block;
+    }
+    #side-bar {
+        width: 100%;
+        display: none;
+        color: black;
+    }
+    #side-bar li img {
+        position: absolute;
+        height: 25px;
+        width: 25px;
+        left: 40px;
+        top: 15px;
+    }
+    #side-bar li span {
+        display: inline-block;
     }
     #main-content {
-        left: 80px;
+        left: 0;
+    }
+    .background-banner {
+        height: 60px;
+    }
+    .profile-position {
+        top: 80px;
+    }
+    .circle {
+        height: 90px;
+        width: 90px;
+    }
+    .content .col-6 h1 {
+        font-size: 20px;
+    }
+    .content .col-6 div {
+        margin-top: 20px;
+        font-size: 60px;
     }
 }
 

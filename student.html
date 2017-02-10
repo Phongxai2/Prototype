@@ -17,23 +17,49 @@
     <div id="main-header">
         <header>
             <p>Student Dashboard / John Doe</p>
+            <img id="menu-toggle" src="img/menu.svg" alt="">
             <a href="#"><img src="img/user-1.svg" alt=""></a>
         </header>
     </div>
 
     <div id="side-bar">
         <ul>
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">Points</a></li>
-            <li><a href="#">Settings</a></li>
-            <li><a href="index.html">Log Out</a></li>
+          <li class="ripple">
+              <a href=""><img src="img/shopping-cart.svg" alt=""><span>Shopping</span></a>
+          </li>
+          <li class="ripple">
+              <a href=""><img src="img/quality-badge.svg" alt=""><span>Points</span></a>
+          </li>
+          <li class="ripple">
+              <a href=""><img src="img/settings.svg" alt=""><span>Settings</span></a>
+          </li>
+          <li class="ripple">
+              <a href="index.html"><img src="img/logout.svg" alt=""><span>Log Out</span></a>
+          </li>
         </ul>
     </div>
     </div>
     <div id="main-content">
         <div class="content">
             <div class="col-12">
-              <span><h1>John Doe</h1></span>
+                <!-- <span><h1>John Doe</h1></span> -->
+                    <div class="background-banner"></div>
+                    <div class="profile-position circle">
+                        <span>
+      <!-- <img src="http://imgur.com/ElXB7cr.jpg" alt="imagem"/> -->
+                            <img src="img/user-1.svg" alt="">
+                        </span>
+                    </div>
+                    <div class="col-12">
+                      <div class="col-6" id="merit">
+                        <h1>Total Merit</h1>
+                        <div><strong>6</strong></div>
+                      </div>
+                      <div class="col-6" id="point">
+                        <h1>Total Points</h1>
+                        <div><strong>10</strong></div>
+                      </div>
+                    </div>
             </div>
         </div>
     </div>
