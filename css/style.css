@@ -263,6 +263,9 @@ button a {
 
 @media only screen and (max-width: 600px) {
     /*Begin queries for form page*/
+    .banner div img {
+      display: none;
+    }
     .logo span {
         font-size: 30px;
     }
