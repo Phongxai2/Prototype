@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Vanguard Tech</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Rationale' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <header>
+        <div class="logo"><span>Vanguard</span><span id="logo-test-shadow">tech</span></div>
+    </header>
+    <!--End of Header-->
+    <div class="form-module">
+        <div class="banner">
+            <p>One stop for your Student Rewards Program</p>
+            <div><img src="img/badge.svg" alt=""></div>
+        </div>
+        <div id="regis-confirm">
+          <p>Hi thank you for signing up to Vanguard Tech. A confirmation has been sent to your email address. Click the link in your email to finish registering. Make sure to check your spam box in case it got filtered.</p>
+          <a href="#">Re-send Confirmation</a>
+        </div>
+        <form id="regis-form">
+            <p>Registration Form</p>
+            <p>Only students or teachers with a valid school email address may sign up</p>
+            <div class="input-form" id="first-name">
+                <input id="fName" type="text" placeholder="First Name" required>
+            </div>
+            <div class="input-form">
+                <input id="lName" type="text" placeholder="Last Name" required>
+            </div>
+            <div class="input-form">
+                <input id="rEmail" type="email" placeholder="School Email" required>
+            </div>
+            <p>Are you a Teacher?</p>
+            <div class="input-form">
+                <div class="input-checkbox">
+                    <p>Yes</p>
+                    <input type="checkbox" placeholder="School Email">
+                </div>
+                <div class="input-checkbox">
+                    <p>No</p>
+                    <input type="checkbox" placeholder="School Email">
+                </div>
+            </div>
+            <button type="button" id="regis-button" data-ripple-color="#89669b"><a href="#">Register</a></button>
+        </form>
+        <!--  end Form -->
+    </div>
+    <!--  End Main Content -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
